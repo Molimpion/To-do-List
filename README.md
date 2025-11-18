@@ -13,7 +13,6 @@ Este projeto é a implementação do desafio Todo List API do [roadmap.sh](https
 
 ### 1. Visão Geral e Estado do Projeto
 
-<!-- Lista de requisitos -->
 - [x] Funcionalidade Central (CRUD)
 - [x] Autenticação (JWT)
 - [x] Paginação e Filtros
@@ -72,81 +71,15 @@ python run.py
 | PUT    | /todos/{id}    | Atualiza tarefa/status          | Token Obrigatório   |
 | DELETE | /todos/{id}    | Remove uma tarefa               | Token Obrigatório   |
 ```
+Este modelo destaca as tecnologias com badges, facilita a leitura e padroniza as informações essenciais do projeto.
 
-***
-
-## Versão 2: Visual Moderno com Skill Icons – Foco em Stack Imediato e Experiência
-
-```markdown
-# 📝 Todo List API (Roadmap.sh Challenge)
-
-<div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,flask,mysql,docker,swagger,pytest" />
-  </a>
-</div>
-
-Este projeto é a implementação do desafio Todo List API do [roadmap.sh](https://roadmap.sh/projects/todo-list-api), desenvolvido com arquitetura modular e código limpo.
-
----
-
-### Visão Geral do Projeto
-
-- API RESTful para tarefas pessoais
-- Padrão Modular e Service Pattern implementados
-- CRUD, autenticação JWT, filtros e testes
-- Documentação Swagger + testes Pytest
-
----
-
-### Arquitetura & Design
-
-- **Módulos organizados:** auth e todos, isolamento em services
-- **Banco:** MySQL 8.0, dockerizado
-- **Autenticação:** JWT, segurança por werkzeug
-- **DX:** Rich (logs), Flasgger (docs)
-
----
-
-### Como Executar
-
-**1. Pré-requisitos:**  
-Git, Docker, Python >=3.10, venv
-
-**2. Setup:**  
-- Clone, crie venv e instale dependências
-- Configure o arquivo `.env`  
-- Suba o banco com `docker-compose up -d`  
-- Rode `python run.py`
-
----
-
-### Testes & Documentação
-
-- Swagger: [http://127.0.0.1:5000/docs](http://127.0.0.1:5000/docs)  
-- Testes: `PYTHONPATH=. pytest`  
-- Testes manuais: arquivo `api.http` completo
-
----
-
-### Endpoints Principais
-
-| Método | Endpoint        | Descrição                       | Segurança           |
-|--------|----------------|---------------------------------|---------------------|
-| POST   | /auth/register | Cria um novo usuário            | Público             |
-| POST   | /auth/login    | Autentica e retorna o JWT       | Público             |
-| POST   | /todos         | Cria uma nova tarefa            | Token Obrigatório   |
-| GET    | /todos         | Lista tarefas                   | Token Obrigatório   |
-| PUT    | /todos/{id}    | Atualiza tarefa/status          | Token Obrigatório   |
-| DELETE | /todos/{id}    | Remove uma tarefa               | Token Obrigatório   |
-```
-
-***
-
-Essas duas estruturas estão entre as mais apreciadas em projetos open source de qualidade e vão valorizar ainda mais o seu repositório. Você pode alternar entre o visual mais “corporativo” do Shields.io ou o impacto moderno e direto dos Skill Icons, sempre com tabelas e divisão lógica das seções.[1][2][3][4][5]
-
-[1](https://github.com/tandpfun/skill-icons)
-[2](https://github.com/gui-bus/TechIcons)
-[3](https://skillicons.dev)
-[4](https://github.com/cfprocha/distintivos)
-[5](https://apidog.com/pt/blog/api-documentation-best-practices-and-tools-pt/)
+[1](https://roadmap.sh/projects/todo-list-api)
+[2](https://github.com/mrizkisaputra/backend-projects)
+[3](https://roadmap.sh/api-design)
+[4](https://www.linkedin.com/posts/roadmapsh_todo-list-api-project-idea-activity-7391635707343245312-94xX)
+[5](https://bump.sh/blog/using-readme-style-api-documentation-to-enhance-your-api-design/)
+[6](https://www.youtube.com/watch?v=9lS3slfJ0x0)
+[7](https://roadmap.sh)
+[8](https://ui.shopafzar.ir/projects/todo-list-api/solutions)
+[9](https://roadmap.sh/backend/projects)
+[10](https://readme.com/resources/api-documentation-essentials-from-creation-to-integration)
