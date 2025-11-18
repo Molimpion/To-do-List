@@ -8,6 +8,7 @@ from src.extensions import db, jwt
 from src.modules.auth import auth_bp
 from src.modules.todos import todos_bp
 from src.exceptions import APIError
+from rich.console import Console
 
 logging.basicConfig(
     level="INFO",
@@ -18,12 +19,15 @@ logging.basicConfig(
 
 load_dotenv()
 
-def create_app():
+def create_app(test_config=None):
     app = Flask(__name__)
 
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
+
+    if test_config:
+        app.config.update(test_config)
 
     app.config['SWAGGER'] = {
         'title': 'Todo List API',

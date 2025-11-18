@@ -5,3 +5,5 @@ mysql-connector-python
 python-dotenv
 flasgger
 rich
+pytest
+pytest-flask
