@@ -4,21 +4,23 @@
 
 *Este projeto é a implementação do desafio **Todo List API** do [roadmap.sh](https://roadmap.sh/projects/todo-list-api), construído com foco em **Arquitetura Modular (Service Pattern)** e **Qualidade de Código**.*
 
-<div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,flask,mysql,docker,html,css,js,ts" />
-  </a>
-</div>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-## 1\. Visão Geral do Projeto
+## 1\. Visão Geral e Estado do Projeto
 
-Este repositório contém uma **API RESTful** completa para gerenciamento de tarefas pessoais. O projeto concluiu com sucesso todos os requisitos do desafio **Todo List API** do roadmap.sh, com ênfase em **isolamento de dados (Usuário/Tarefas)**, **segurança (JWT)** e **qualidade de código**.
+Este repositório contém uma **API RESTful** completa para gerenciamento de tarefas pessoais. O objetivo principal foi cumprir o desafio do roadmap.sh e, adicionalmente, aplicar padrões de projetos vistos no mercado (como Service Pattern e Logs estruturados).
 
-### O Projeto Está:
+Todos os requisitos funcionais do backend foram **concluídos, documentados com Swagger e validados por testes automatizados**.
 
-  * [x] **Funcional (CRUD) e Seguro (JWT)**
-  * [x] **Documentado Interativamente (Swagger UI)**
-  * [x] **Validado por Testes Automatizados (Pytest)**
+  * [x] **Funcionalidade Central (CRUD):** Completo
+  * [x] **Autenticação (JWT):** Completo
+  * [x] **Paginação e Filtros:** Completo
+  * [x] **Testes Automatizados (Pytest):** Completo
+  * [x] **Documentação Interativa (Swagger):** Completo
+  * [x] **Arquitetura Modular (Service Pattern):** Completo
 
 -----
 
