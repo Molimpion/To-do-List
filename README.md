@@ -1,8 +1,4 @@
-Com certeza\! Vamos estruturar o **README.md** do seu projeto de **Todo List API** para que ele tenha a mesma qualidade profissional e detalhamento técnico do projeto S.O.R.O., destacando suas escolhas de arquitetura (Modular, Service Pattern) e qualidade (Testes, Swagger).
-
------
-
-# 📝 Repositório da Todo List API (Roadmap.sh Challenge)
+#Repositório da Todo List API (Roadmap.sh Challenge)
 
 -----
 
