@@ -1,98 +1,91 @@
 # 🐍 Todo List API (Desafio Roadmap.sh)
 
-*Este projeto é a implementação do desafio **Todo List API** do [roadmap.sh](https://roadmap.sh/projects/todo-list-api), construído com foco em **Arquitetura Modular (Service Pattern)** e **Qualidade de Código**.*
+*Implementação do desafio **Todo List API** do [roadmap.sh](https://roadmap.sh/projects/todo-list-api), usando **Arquitetura Modular (Service Pattern)** e foco em **qualidade de código**.*
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
-![Pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge\&logo=flask\&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge\&logo=docker\&logoColor=white) ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge\&logo=swagger\&logoColor=black) ![Pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge\&logo=pytest\&logoColor=white)
 
-## 1\. Visão Geral e Estado do Projeto
+## 1. Visão Geral e Estado do Projeto
 
-Este repositório contém uma **API RESTful** completa para gerenciamento de tarefas pessoais. O objetivo principal foi cumprir o desafio do roadmap.sh e, adicionalmente, aplicar padrões de projetos vistos no mercado (como Service Pattern e Logs estruturados).
+API RESTful para gerenciamento de tarefas pessoais, cumprindo todos os requisitos do desafio. Todas as funcionalidades foram concluídas, documentadas via Swagger e validadas com testes automatizados.
 
-Todos os requisitos funcionais do backend foram **concluídos, documentados com Swagger e validados por testes automatizados**.
+* [x] CRUD
+* [x] Autenticação (JWT)
+* [x] Paginação e filtros
+* [x] Testes automatizados
+* [x] Documentação Swagger
+* [x] Arquitetura Modular (Service Pattern)
 
-- [x] Funcionalidade Central (CRUD)
-- [x] Autenticação (JWT)
-- [x] Paginação e Filtros
-- [x] Testes Automatizados (Pytest)
-- [x] Documentação Interativa (Swagger)
-- [x] Arquitetura Modular (Service Pattern)
+## 2. Arquitetura e Decisões
 
-### 2. Arquitetura e Decisões de Design
+* Separação por módulos (features)
+* Service Pattern
+* Flask + Python
+* MySQL 8 (Docker Compose)
+* Autenticação JWT
+* Handler de erros centralizado
+* DX com Rich e Flasgger
 
-- Separação por módulos (features)
-- Service Pattern para lógica desacoplada
-- Flask e Python para microserviços
-- MySQL 8 via Docker Compose
-- JWT para autenticação
-- Handler de erros centralizados (__init__.py)
-- DX: Rich, Flasgger
+---
 
------
+## 3. Como Executar Localmente
 
-## 3\. Como Executar o Projeto Localmente
+Ambiente padronizado via Docker (MySQL) e Python em `venv`.
 
-O ambiente é padronizado via Docker para o banco de dados e o Python roda em `venv`.
+### Pré-requisitos
 
-### 1\. Pré-requisitos
+Git · Docker/Compose · Python 3.10+ com venv
 
-  * Git
-  * Docker e Docker Compose (para o MySQL)
-  * Python 3.10+ e `venv`
+### Setup
 
-### 2\. Setup e Inicialização
+1. Clone, crie e ative o venv
+2. Instale dependências:
 
-1.  **Clone o repositório, crie e ative o ambiente virtual.**
-2.  **Instale as dependências:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  **Crie o arquivo `.env`** na raiz do projeto (importante para as credenciais).
-4.  **Inicie o Banco de Dados (MySQL):**
-    ```bash
-    docker-compose up -d
-    ```
-5.  **Inicie a Aplicação Flask:**
-    ```bash
-    python run.py
-    ```
-    *O terminal mostrará um link clicável para a documentação via Rich.*
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Crie o `.env` na raiz
+4. Inicie o banco:
 
------
+   ```bash
+   docker-compose up -d
+   ```
+5. Inicie a aplicação:
 
-## 4\. Testes e Documentação
+   ```bash
+   python run.py
+   ```
 
-### 4.1. Testes Automatizados (Pytest) 🧪
+---
 
-Para executar o conjunto de testes (8 testes unitários e de integração), use o comando com `PYTHONPATH` para resolver as importações modulares:
+## 4. Testes e Documentação
+
+### Testes (Pytest)
 
 ```bash
 PYTHONPATH=. pytest
 ```
 
-*A saída deve ser `8 passed`, confirmando a estabilidade do sistema.*
+*Saída esperada: `8 passed`.*
 
-### 4.2. Documentação Interativa (Swagger UI) 📄
+### Documentação (Swagger UI)
 
-A documentação visual e interativa está disponível em: `http://127.0.0.1:5000/docs`
+Disponível em `http://127.0.0.1:5000/docs`.
 
-1.  **Login:** Use o endpoint `/auth/login` para obter o `access_token`.
-2.  **Autorização:** Clique em **"Authorize"** e insira o token no formato: `Bearer [SEU_TOKEN_AQUI]`.
-3.  Execute o CRUD completo na interface do Swagger.
+1. Use `/auth/login` para obter o `access_token`.
+2. Clique em **Authorize** → `Bearer [TOKEN]`.
+3. Execute o CRUD pela interface.
 
------
+---
 
-## 5\. Endpoints Principais
+## 5. Endpoints Principais
 
-| Método | Endpoint | Descrição | Segurança |
-| :--- | :--- | :--- | :--- |
-| `POST` | `/auth/register` | Cria um novo usuário | Público |
-| `POST` | `/auth/login` | Autentica e retorna o JWT | Público |
-| `POST` | `/todos` | Cria uma nova tarefa | **Token Obrigatório** |
-| `GET` | `/todos` | Lista tarefas (com Paginação e Filtros `?status=`) | **Token Obrigatório** |
-| `PUT` | `/todos/{id}` | Atualiza o conteúdo ou status (`is_completed`) | **Token Obrigatório** |
-| `DELETE` | `/todos/{id}` | Remove uma tarefa | **Token Obrigatório** |
+| Método | Endpoint         | Descrição                         | Segurança         |
+| ------ | ---------------- | --------------------------------- | ----------------- |
+| POST   | `/auth/register` | Cria usuário                      | Público           |
+| POST   | `/auth/login`    | Autentica e retorna JWT           | Público           |
+| POST   | `/todos`         | Cria tarefa                       | Token obrigatório |
+| GET    | `/todos`         | Lista tarefas (paginação/filtros) | Token obrigatório |
+| PUT    | `/todos/{id}`    | Atualiza tarefa                   | Token obrigatório |
+| DELETE | `/todos/{id}`    | Remove tarefa                     | Token obrigatório |
+
+Se quiser, posso gerar uma versão **ainda mais enxuta**, porém mantendo tudo o que você escreveu.
