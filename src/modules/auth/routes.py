@@ -31,7 +31,9 @@ def register():
       201:
         description: Usuário criado com sucesso
       400:
-        description: Dados inválidos ou usuário já existe
+        description: Dados de entrada inválidos (ex. campos em falta)
+      409:
+        description: Este usuário já existe
     """
     data = request.get_json()
     AuthService.register(data)
@@ -68,6 +70,8 @@ def login():
           properties:
             access_token:
               type: string
+      400:
+        description: Campos obrigatórios em falta
       401:
         description: Credenciais inválidas
     """
