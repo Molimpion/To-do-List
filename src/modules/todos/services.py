@@ -1,5 +1,5 @@
 from src.extensions import db
-from src.models import Todo
+from .models import Todo
 from src.exceptions import ValidationError
 from .exceptions import TodoNotFoundError
 

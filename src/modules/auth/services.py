@@ -1,7 +1,7 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import create_access_token
 from src.extensions import db
-from src.models import User
+from .models import User
 from src.exceptions import ValidationError
 from .exceptions import AuthError, UserAlreadyExistsError
 
