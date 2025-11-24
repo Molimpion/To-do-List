@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from .services import TodoService
+from src.modules.todos.models import Todo # Import necessário para tipagem se usado, ou apenas lógica
 
 todos_bp = Blueprint('todos', __name__, url_prefix='/todos')
 
@@ -33,7 +34,9 @@ def create():
       201:
         description: Tarefa criada
       400:
-        description: Erro de validação
+        description: Erro de validação (ex. título em falta)
+      401:
+        description: Token ausente ou inválido
     """
     user_id = get_jwt_identity()
     data = request.get_json()
@@ -69,6 +72,8 @@ def list_all():
     responses:
       200:
         description: Lista de tarefas recuperada
+      401:
+        description: Token ausente ou inválido
     """
     user_id = get_jwt_identity()
     page = request.args.get('page', 1, type=int)
@@ -115,6 +120,8 @@ def update_task(todo_id):
     responses:
       200:
         description: Tarefa atualizada
+      401:
+        description: Token ausente ou inválido
       404:
         description: Tarefa não encontrada
     """
@@ -141,6 +148,8 @@ def delete(todo_id):
     responses:
       200:
         description: Tarefa deletada com sucesso
+      401:
+        description: Token ausente ou inválido
       404:
         description: Tarefa não encontrada
     """
