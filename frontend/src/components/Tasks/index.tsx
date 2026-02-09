@@ -1,5 +1,5 @@
 import { ClipboardText } from 'phosphor-react';
-import { ITask } from '../Task'; // Importamos a interface da pasta vizinha
+import { type ITask } from '../Task';
 import { Task } from '../Task';
 import styles from './Tasks.module.css';
 
